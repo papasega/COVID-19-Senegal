@@ -31,7 +31,7 @@ import plotly.express as px
 
 st.header("COVID-19 au Sénégal 🇸🇳")
 
-st.sidebar.markdown("*Dernière mise à jour: 22/03/2020*")
+st.sidebar.markdown("*Dernière mise à jour: 23/03/2020*")
 st.sidebar.markdown("---")
 st.sidebar.header("Ressources utiles")
 
@@ -53,7 +53,7 @@ st.sidebar.markdown("Rue Aimé Césaire, Dakar, Sénégal")
 st.sidebar.markdown("+221 800 00 50 50 - contact@sante.gouv.sn")
 
 st.sidebar.markdown("---")
-st.sidebar.markdown("Réalisé par [Papa Séga WADE](https://github.com/papasega/COVID-19-Senegal) en coloboration avec  [Maël Fabien](https://maelfabien.github.io/) et [Dakar Institute of Technology](https://dit.sn/)")
+st.sidebar.markdown("Réalisé par [Papa Séga WADE](https://github.com/papasega/COVID-19-Senegal/) en collaboration avec [Maël Fabien](https://maelfabien.github.io/) et [Dakar Institute of Technology](https://dit.sn/)")
 
 # I. Dataframe
 
@@ -74,12 +74,12 @@ total_geuri = evol_cases.tail(1)['Guéri'][0]
 st.markdown("Nombre de malades: <span style='font-size:1.5em;'>%s</span>"%(total_positif - total_geuri), unsafe_allow_html=True)
 st.markdown("Nombre de décès: <span style='font-size:1.5em;'>%s</span>"%(total_decede), unsafe_allow_html=True)
 st.markdown("Nombre de guérisons: <span style='font-size:1.5em;'>%s</span>"%(total_geuri), unsafe_allow_html=True)
-st.markdown("Pourcentage de guerison: <span style='font-size:1.5em;'>%s</span>"%(np.round(total_geuri / total_positif, 3) * 100), unsafe_allow_html=True)
+st.markdown("Pourcentage de guerison: <span style='font-size:1.5em;'>%s</span>"%(np.round(total_geuri / total_positif * 100, 1)), unsafe_allow_html=True)
 st.markdown("Taux de croissance journalier lissé sur les 2 derniers jours: <span style='font-size:1.5em;'>%s</span>"%(np.round(pd.DataFrame(np.sqrt(evol_cases['Positif'].pct_change(periods=2)+1)-1).tail(1)['Positif'][0] * 100, 2)), unsafe_allow_html=True)
 st.markdown("Nombre total de cas positifs: <span style='font-size:1.5em;'>%s</span>"%(total_positif), unsafe_allow_html=True)
 st.markdown("Nombre de tests negatifs: <span style='font-size:1.5em;'>%s</span>"%(total_negatif), unsafe_allow_html=True)
 st.markdown("Nombre de tests réalisés: <span style='font-size:1.5em;'>%s</span>"%(total_positif + total_negatif), unsafe_allow_html=True)
-st.markdown("Pourcentage de tests positifs: <span style='font-size:1.5em;'>%s</span>"%(np.round(total_positif / (total_positif + total_negatif), 3) * 100), unsafe_allow_html=True)
+st.markdown("Pourcentage de tests positifs: <span style='font-size:1.5em;'>%s</span>"%(np.round(total_positif / (total_positif + total_negatif) * 100, 1)), unsafe_allow_html=True)
 
 
 # II. Map
