@@ -53,7 +53,7 @@ st.sidebar.markdown("Rue Aimé Césaire, Dakar, Senegal")
 st.sidebar.markdown("+221 800 00 50 50 - contact@sante.gouv.sn")
 
 st.sidebar.markdown("---")
-st.sidebar.markdown("Ñi ka derale moye [Papa Séga WADE](https://github.com/papasega/COVID-19-Senegal)  [Maël Fabien](https://maelfabien.github.io/) ak [Dakar Institute of Technology](https://dit.sn/)")
+st.sidebar.markdown("Ñi ka defale moye [Papa Séga WADE](https://github.com/papasega/COVID-19-Senegal)  [Maël Fabien](https://maelfabien.github.io/) ak [Dakar Institute of Technology](https://dit.sn/)")
 
 # I. Dataframe
 
