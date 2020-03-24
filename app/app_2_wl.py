@@ -31,7 +31,7 @@ import plotly.express as px
 
 st.header(" Xibaar yu aju ci Jangorëy Koronaa ci Senegal 🇸🇳")
 
-st.sidebar.markdown("*yeesal gu muj: 25/03/2020*")
+st.sidebar.markdown("*Yeesal gu muj: 25/03/2020*")
 st.sidebar.markdown("---")
 st.sidebar.header("Ressources utiles")
 
@@ -148,7 +148,7 @@ st.bokeh_chart(p)
 
 # III. Map
 st.markdown("---")
-st.subheader(" Yoqute limu ñi ame Koronaa ci Senegal")
+st.subheader(" Yoqqute limu ñi ame Koronaa ci Senegal")
 st.write("La courbe 'Positif' représente l'ensemble des cas, et la courbe 'Actifs' élimine les cas guéris et représente le nombre de cas actifs.")
 evol_cases['Actifs'] = evol_cases['Positif'] - evol_cases['Guéri']
 
