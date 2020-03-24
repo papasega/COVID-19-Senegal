@@ -258,3 +258,12 @@ st.write("5. La plupart des personnes malades résident au Sénégal")
 st.write(df['Resident Senegal'].dropna().value_counts())
 
 st.write("6. Le temps d'hospitalisation moyen pour le moment est de : ", np.mean(df['Temps Hospitalisation (j)'].dropna()), " jours")
+
+# V. Gestes de Portection
+st.markdown("---")
+st.subheader("CORONAVIRUS, POUR SE PROTÉGER ET PROTÉGER LES AUTRES ")
+st.write("1.Se laver très régulièrement les mains ")
+st.write("2.Tousser ou éternuer dans son coude ou dans un mouchoir ")
+st.write("3.Utiliser un mouchoir à usage unique et le jeter")
+st.write("4.Saluer sans se serrer la main, éviter les embrassades")
+
