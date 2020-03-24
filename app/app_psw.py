@@ -29,9 +29,9 @@ import math
 from scipy.optimize import curve_fit
 import plotly.express as px
 
-st.header("Xibaaru Jangorëy COVID-19 au Sénégal 🇸🇳")
+st.header("Xibaar yu aju ci Jangorëy Koronaa ci Senegal 🇸🇳")
 
-st.sidebar.markdown("*Dernière mise à jour: 23/03/2020*")
+st.sidebar.markdown("*Dernière mise à jour: 24/03/2020*")
 st.sidebar.markdown("---")
 st.sidebar.header("Ressources utiles")
 
