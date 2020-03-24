@@ -149,25 +149,31 @@ st.bokeh_chart(p)
 # III. Map
 st.markdown("---")
 st.subheader(" Yoqqute limu ñi ame Koronaa ci Senegal")
-st.write("La courbe 'Positif' représente l'ensemble des cas, et la courbe 'Actifs' élimine les cas guéris et représente le nombre de cas actifs.")
+st.write("Yoqqute 'Positif' mi mooy wanee ñi amee jagorogui ñeup, ak yoqqute 'Actifs' mi mooy wañi ñigua xamane tanee wer ñañu teey nataal limu ñu 'actifs'.")
 evol_cases['Actifs'] = evol_cases['Positif'] - evol_cases['Guéri']
 
-highlight = alt.selection(type='single', on='mouseover',
-                          fields=['Positif'], nearest=True)
+#highlight = alt.selection(type='single', on='mouseover',fields=['value'], nearest=True)
 
-chart = alt.Chart(evol_cases.reset_index()).mark_line(point=True, strokeWidth=5).encode(
-    x='Date:T',
-    y='Positif:Q',
-    tooltip='Positif:Q'
-).add_selection(
-    highlight
+#chart = alt.Chart(evol_cases.reset_index()).mark_line(point=True, strokeWidth=5).encode(x='Date:T', y='Actifs:Q', tooltip='Actifs:Q').add_selection(highlight).properties(height=400, width=700)
+
+#chart2 = alt.Chart(evol_cases.reset_index()).mark_line(point=True, strokeWidth=5).encode(x='Date:T',y='Positif:Q',tooltip='Positif:Q').properties(height=400, width=700)
+
+ch0 = alt.Chart(evol_cases.reset_index()).transform_fold(
+     ['Positif', 'Actifs'],
+).mark_line(size=5, point=True).encode(
+     x='Date:T',
+     y='value:Q',
+     color='key:N', 
+     tooltip="value:Q"
 ).properties(height=400, width=700)
 
+st.write(ch0)
+#altair_chart(ch0)
 
-st.write(chart.interactive())
+#st.write((chart + chart2).interactive())
 
 st.markdown("---")
-st.subheader("Meengële reewu Pays-Bas")
+st.subheader("Meengële ak reewu Pays-Bas")
 
 st.write("Senegal reewle bigua xamane tane limu wëy dëkkee dafa meggo ak reewu Pays-bas (lu eup Fukk ak jurrom benn million), ba taxna a meengële meuna dox di diggënte ñaari dëkk yooyee. Donete yoqqute Jangorëy Koronaa gui ci reewum Senegaal la geune yeexee ci cunu jooni yalla taye, luñu setlu ci ni Jangoro gui di doxee diarna bayi xel wayee itameu lathena ñu xalateci bu bax. Fi gua xamenee mome leu rewu Senegaal tolu ci Jangorëy Koronaa dafa mengo ci fukki fan ak juroom ci ginaaw fi reew mi di Pays-Bas tolone, wayee xayma gogu boye seteu juroom ñaari faneule guir rew Pays-bas tee ci Senegaal fukki fan ak juroom ñeet. Lim yii aju ci reewu  Pays-Bas ñuguiko jeulé ci Wikipedia: https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_the_Netherlands")
 
