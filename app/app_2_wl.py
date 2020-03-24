@@ -35,15 +35,15 @@ st.sidebar.markdown("*yeesal gu muj: 25/03/2020*")
 st.sidebar.markdown("---")
 st.sidebar.header("Ressources utiles")
 
-st.sidebar.markdown("Numero guir woté bu jamp bu jeuk: **78 172 10 81**")
-st.sidebar.markdown("Numero guir woté bu jamp ñaaréle: **76 765 97 31**")
-st.sidebar.markdown("Numero guir woté bu jamp ñeetéle: **70 717 14 92**")
-st.sidebar.markdown("Numero boye woté té do fayye bu ministere: **800 00 50 50**")
+st.sidebar.markdown("Numero guir wotee bu jamp bu jeuk: **78 172 10 81**")
+st.sidebar.markdown("Numero guir wotee bu jamp ñaarele: **76 765 97 31**")
+st.sidebar.markdown("Numero guir wotee bu jamp ñeetele: **70 717 14 92**")
+st.sidebar.markdown("Numero boye wotee tee do fayye bu ministere: **800 00 50 50**")
 st.sidebar.markdown("Samu: **1515**")
 st.sidebar.markdown("Besel ci sa telefone : **#2121#**")
 st.sidebar.markdown("[Saytul say sa yarame ci Jangoroji ci Prevcovid19](http://www.prevcovid19.com/#/teste)")
 st.sidebar.markdown("[Tweetru ministre gui eub walu wergu yaram ](https://twitter.com/MinisteredelaS1)")
-st.sidebar.markdown("[Booleb xéeti mbir ak màndargaay jumtukaayu ](https://github.com/maelfabien/COVID-19-Senegal)")
+st.sidebar.markdown("[Booleb xeeti mbir ak màndargaay jumtukaayu ](https://github.com/maelfabien/COVID-19-Senegal)")
 st.sidebar.markdown("---")
 
 st.sidebar.header("Jokko ak wa ministere")
@@ -53,7 +53,7 @@ st.sidebar.markdown("Rue Aimé Césaire, Dakar, Senegal")
 st.sidebar.markdown("+221 800 00 50 50 - contact@sante.gouv.sn")
 
 st.sidebar.markdown("---")
-st.sidebar.markdown("Ñi ka derale moye  [Maël Fabien](https://maelfabien.github.io/) ak [Dakar Institute of Technology](https://dit.sn/)")
+st.sidebar.markdown("Ñi ka derale moye [Papa Séga WADE](https://github.com/papasega/COVID-19-Senegal)  [Maël Fabien](https://maelfabien.github.io/) ak [Dakar Institute of Technology](https://dit.sn/)")
 
 # I. Dataframe
 
@@ -65,6 +65,12 @@ df['Date'] = pd.to_datetime(df['Date'], dayfirst=True)
 evol_cases = df[['Date', 'Positif', 'Negatif', 'Décédé', 'Guéri']].groupby("Date").sum().cumsum()
 
 st.subheader("Ci tënkk")
+st.subheader("Lan môy CORONAVIRUS 🦠?")
+st.write("CORONAVIRUS dá dajalee yaneen xeeti VIRUS yuñ mëna wállántee çii ay nit ak ay Mala.🐃 Liñ mënë môdinee, ci dômu âdama yi, xeetu CORONAVIRUS yi mon-na sabab tawatı noy-yi🤧 yüy jeexital thim söthie ak yeeneen xéti woppi noy-yi yu thiosano peńku (MERS) andank mandargay pút gúy meetti di xasan (SRAS). CORONA bumúja féñ môy waral tawati CORONAVIRUS ñu guën kô xam ci Covid-19.")
+
+st.subheader("Lan môy Covid-19 ?")
+
+st.write("Covid-19 täwatt lä júy Wä-lee laa . Dômu DianGoro CORONAVIRUS bî moudiee féñ môkoy sabab. Dômu diangoro diouyeess jôju ak tawat jôju xameesu lénwon mânâm , keenna xamouko won la ndiague müy féñ çä diwanu Wuhan ca sîn ci weeru deesabar (decembre) atum 2019.")
 
 total_positif = evol_cases.tail(1)['Positif'][0]
 total_negatif = evol_cases.tail(1)['Negatif'][0]
@@ -84,7 +90,7 @@ st.markdown("dayob ñi ame feebar bi ci ñi ñu saytu: <span style='font-size:1.
 
 # II. Map
 st.markdown("---")
-st.subheader("ñi ame feebar bi fu ñu féete")
+st.subheader("Ñi ame feebar bi fu ñu féete")
 shapefile = 'app/ne_110m_admin_0_countries.shp'
 
 #Read shapefile using Geopandas
@@ -159,16 +165,16 @@ chart = alt.Chart(evol_cases.reset_index()).mark_line(point=True, strokeWidth=5)
 st.write(chart.interactive())
 
 st.markdown("---")
-st.subheader("Mingalé rewu Pays-Bas")
+st.subheader("Meengële reewu Pays-Bas")
 
-st.write("Senegaal rewle bigua xamanetané limu way-dëkké dafa méggo ak rewu Pays-bas (Fukk ak jurrom benn million), ba taxna ab mégele meuna dox di diganté ñaari dëkk yoyé. Doneté yoqute Jangorëy Koronaa gui ci rewum Senegaal la geune yéxé ci sinu dioni yalla taye, luñu setlu ci ni Jangoro gui di doxé diarna bayi xel wayé itameu lathe na niou xalate ci.Fi gua xamené mome leu rewu Senegaal tolu ci Jangorëy Koronaa dafa mengo ci fukki fan ak juroom ci guinaw fi rew mi di Pays-Bas Tolone,wayé xayma gogu boye seteu juroom ñaari faney le guir rew pays-bas té Senegaal fukki fan ak juroom ñeet. Lim yi aju ci rewu  Pays-Bas ñuguike jeulé ci Wikipedia: https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_the_Netherlands")
+st.write("Senegal reewle bigua xamane tane limu wëy dëkkee dafa meggo ak reewu Pays-bas (lu eup Fukk ak jurrom benn million), ba taxna a meengële meuna dox di diggënte ñaari dëkk yooyee. Donete yoqqute Jangorëy Koronaa gui ci reewum Senegaal la geune yeexee ci cunu jooni yalla taye, luñu setlu ci ni Jangoro gui di doxee diarna bayi xel wayee itameu lathena ñu xalateci bu bax. Fi gua xamenee mome leu rewu Senegaal tolu ci Jangorëy Koronaa dafa mengo ci fukki fan ak juroom ci ginaaw fi reew mi di Pays-Bas tolone, wayee xayma gogu boye seteu juroom ñaari faneule guir rew Pays-bas tee ci Senegaal fukki fan ak juroom ñeet. Lim yii aju ci reewu  Pays-Bas ñuguiko jeulé ci Wikipedia: https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_the_Netherlands")
 
 df_nl = pd.read_csv("df_nl.csv")
 
 plt.figure(figsize=(16,10))
 plt.plot(df_nl['Netherlands'], linestyle="--", linewidth=5, label="Pays-Bas")
 plt.plot(df_nl['Senegal'],label="Sénégal", linewidth=5)
-plt.figtext(.5,.9,'Evolution des cas au Sénégal et aux Pays-Bas', fontsize=30, ha='center')
+plt.figtext(.5,.9,'yoqute limu ñi ame Koronaa ci Senegal ak ci Pays-bas', fontsize=30, ha='center')
 plt.legend()
 st.pyplot(plt)
 
@@ -176,7 +182,7 @@ st.pyplot(plt)
 st.markdown("---")
 st.subheader("Tassarok Jangorogui")
 
-st.write("Ñugui xamé ñeneu ñu jeulé Jangoroji ci ñu jugué bimeu rew, ci niit ñu feebar yigua xamené ño waleu ñeni niit.Limu ñigua xamné ño ameu Jangoroji té jeuléko ci biir rewmi, moye waleu gui geuna ragalu ci walanté Jangoroji..")
+st.write("Ñugui xamee ñeneu ñu jeulee Jangoroji ci ñu juguee bimeu rew, ci niit ñu feebar yigua xamené ño waleu ñeni niit. Limu ñigua xamné ño ameu Jangoroji tee jeuléko ci biir rewmi, moye waleu gui geuna ragalu ci walantee Jangoroji.")
 
 facteur = df[['Date', 'Facteur']].dropna()
 facteur['Count'] = 1
@@ -202,17 +208,17 @@ ch0 = alt.Chart(df_int).transform_fold(
 
 st.altair_chart(ch0)
 
-st.write("Ñu dieulé Jangoroji bitimeu rew, té waleu Jangoroji ñeneu ñu dëkk Senegaal, Ñugui jugué ci rew yi :")
+st.write("Ñu dieulee Jangoroji bitimeu rew, tee waleu Jangoroji ñeneu ñu dëkk Senegaal, Ñugui jugué ci rew yi :")
 
 ch3 = alt.Chart(df.dropna(subset=['Source/Voyage'])).mark_bar().encode(
 	x = 'Source/Voyage:N',
-    y=alt.Y('count()', title='Nombre de patients')
-).properties(title="Provenance des malades", height=300, width=700)
+    y=alt.Y('count()', title='Limu aji wopgui')
+).properties(title="Fi aji tawategui sokeeko", height=300, width=700)
 
 st.write(ch3)
 
 # Interactive Map
-st.write("Natalu feega xamené fila jangorey koronaa bi jugué:")
+st.write("Natalu feega xamenee fila jangorey koronaa bi juguee:")
 
 df3 = px.data.gapminder().query("year == 2007")
 df2 = df3[(df3['country']=="Italy") | (df3['country']=="Senegal") | (df3['country']=="United Kingdom") | (df3['country']=="France") | (df3['country']=="Spain")]
@@ -225,7 +231,7 @@ st.plotly_chart(fig)
 # V. Population
 st.markdown("---")
 st.subheader("Way-dëkk ñu feebar daleu.")
-st.write("Les chiffres présentés ci-dessous tiennent compte des publication du Ministère de la Santé et de l'Action Sociale. Certaines données sont manquantes, et nous n'affichons que les valeurs connues à ce jour.")
+st.write(" Limyi ñu jeufediko mougui juguee ci lu minitere buye saytu lu aju ci waalu wergu yaraam di feeñal ci aye diotaayame bess bu diot guir xibaaree askanew Senegal lu aju ci jagorëy koronaa bi ci Senegal")
 
 st.write("1. At ñu eupe  ci yi Jangoroji di diap ", np.mean(df['Age'].dropna()), " ans")
 
@@ -244,8 +250,8 @@ st.write("3. Ñu eupe ci ñu feebar bi diapeu ndakaru lañu dëkké")
 
 ch2 = alt.Chart(df.dropna(subset=['Ville'])).mark_bar().encode(
 	x = 'Ville:N',
-    y=alt.Y('count()', title='Nombre de patients')
-).properties(title="Ville connue du patient", height=300, width=700)
+    y=alt.Y('count()', title='Limu ñi wop')
+).properties(title="Dëkku aji wopjii", height=300, width=700)
 
 st.write(ch2)
 
@@ -253,8 +259,20 @@ st.write("4. Ñu eupe ci niit ñu amé Jangoroji Senegaal lañu dëkk.")
 
 st.write(df['Resident Senegal'].dropna().value_counts())
 
-st.write("5. Ñu eupe ci niit ñu amé Jangoroji Senegaal lañu dëkk.")
+st.write("5. Ñu eupe ci niit ñu amee Jangoroji Senegaal lañu dëkk.")
 
 st.write(df['Resident Senegal'].dropna().value_counts())
 
 st.write("6. Faan ñigua xamné aji wop gui ci laye teud lalu opital : ", np.mean(df['Temps Hospitalisation (j)'].dropna()), " Faan")
+
+# V. Population
+st.markdown("---")
+st.subheader("Ngir fagaru ci jangoro koronã bi ")
+st.write("1. Nä ngay raxass säy loxo ak ndox ak saabu ak oddu sawel bamu sett 👌 ")
+st.write("2. Nä ngay moytu saafanto bubari bi si waxtu wii🤝")
+st.write("3. Nä ngay faral di ñandu ak di tisli si mussuwár")
+st.write("4. Dëll moytu di lál säyy bët,👀 wala sunu guëmëñ👄 wala sä bakän👃🏽")
+st.write("5. Nañiy moytu didajalo don mbôlô👨‍👩‍👦‍👦")
+st.write("6.Nañuy faral didiw sel hydro alcolique sisunuy loxo")
+
+
