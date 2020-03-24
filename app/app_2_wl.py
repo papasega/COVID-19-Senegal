@@ -149,6 +149,8 @@ st.bokeh_chart(p)
 # III. Map
 st.markdown("---")
 st.subheader(" Yoqute limu ñi ame Koronaa ci Senegal")
+st.write("La courbe 'Positif' représente l'ensemble des cas, et la courbe 'Actifs' élimine les cas guéris et représente le nombre de cas actifs.")
+evol_cases['Actifs'] = evol_cases['Positif'] - evol_cases['Guéri']
 
 highlight = alt.selection(type='single', on='mouseover',
                           fields=['Positif'], nearest=True)
@@ -174,7 +176,7 @@ df_nl = pd.read_csv("df_nl.csv")
 plt.figure(figsize=(16,10))
 plt.plot(df_nl['Netherlands'], linestyle="--", linewidth=5, label="Pays-Bas")
 plt.plot(df_nl['Senegal'],label="Sénégal", linewidth=5)
-plt.figtext(.5,.9,'yoqute limu ñi ame Koronaa ci Senegal ak ci Pays-bas', fontsize=30, ha='center')
+plt.figtext(.5,.9,'Yoqqute limu ñi ame Koronaa ci Senegal ak ci Pays-bas', fontsize=30, ha='center')
 plt.legend()
 st.pyplot(plt)
 
@@ -233,11 +235,11 @@ st.markdown("---")
 st.subheader("Way-dëkk ñu feebar daleu.")
 st.write(" Limyi ñu jeufediko mougui juguee ci lu minitere buye saytu lu aju ci waalu wergu yaraam di feeñal ci aye diotaayame bess bu diot guir xibaaree askanew Senegal lu aju ci jagorëy koronaa bi ci Senegal")
 
-st.write("1. At ñu eupe  ci yi Jangoroji di diap ", np.mean(df['Age'].dropna()), " ans")
+st.write("1. At ñu eupe  ci yi Jangoroji di diap ", np.mean(df['Age'].dropna()), " at")
 
 ch = alt.Chart(df).mark_bar().encode(
 	x = 'Age:Q',
-    y=alt.Y('count()', title='Nombre de patients')
+    y=alt.Y('count()', title='Limu ñi feebar')
 ).properties(title="Atu aji wop gui ", height=300, width=700)
 
 st.write(ch)
