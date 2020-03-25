@@ -42,13 +42,13 @@ st.sidebar.markdown("Numero boye wotee tee do fayye bu ministere: **800 00 50 50
 st.sidebar.markdown("Samu: **1515**")
 st.sidebar.markdown("Besel ci sa telefone : **#2121#**")
 st.sidebar.markdown("[Saytul say sa yarame ci Jangoroji ci Prevcovid19](http://www.prevcovid19.com/#/teste)")
-st.sidebar.markdown("[Tweetru ministre gui eub walu wergu yaram ](https://twitter.com/MinisteredelaS1)")
+st.sidebar.markdown("[Tweetru ministre gi eub walu wergu yaram ](https://twitter.com/MinisteredelaS1)")
 st.sidebar.markdown("[Booleb xeeti mbir ak màndargaay jumtukaayu ](https://github.com/maelfabien/COVID-19-Senegal)")
 st.sidebar.markdown("---")
 
 st.sidebar.header("Jokko ak wa ministere")
 
-st.sidebar.markdown("Ministre gui eub walu wergu yaram ak boolem boko / Fann Residence")
+st.sidebar.markdown("Ministre gi eub walu wergu yaram ak boolem boko / Fann Residence")
 st.sidebar.markdown("Rue Aimé Césaire, Dakar, Senegal")
 st.sidebar.markdown("+221 800 00 50 50 - contact@sante.gouv.sn")
 
@@ -70,7 +70,7 @@ st.write("CORONAVIRUS dá dajalee yaneen xeeti VIRUS yuñ mëna wállántee çii
 
 st.subheader("Lan môy Covid-19 ?")
 
-st.write("Covid-19 täwatt lä júy Wä-lee laa . Dômu DianGoro CORONAVIRUS bî moudiee féñ môkoy sabab. Dômu diangoro diouyeess jôju ak tawat jôju xameesu lénwon mânâm , keenna xamouko won la ndiague müy féñ çä diwanu Wuhan ca sîn ci weeru deesabar (decembre) atum 2019.")
+st.write("Covid-19 täwatt lä júy Wä-lee laa . Dômu DianGoro CORONAVIRUS bî moudiee féñ môkoy sabab. Dômu diangoro diouyeess jôju ak tawat jôju xameesu lénwon mânâm , keenna xamouko won la ndiague müy féñ çä diwanu Wuhan ca sîn ci weeru deesabar (decembre) atum 2019. (source: Modou)")
 
 total_positif = evol_cases.tail(1)['Positif'][0]
 total_negatif = evol_cases.tail(1)['Negatif'][0]
