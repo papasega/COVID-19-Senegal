@@ -64,7 +64,7 @@ df['Date'] = pd.to_datetime(df['Date'], dayfirst=True)
 
 evol_cases = df[['Date', 'Positif', 'Negatif', 'Décédé', 'Guéri']].groupby("Date").sum().cumsum()
 
-st.subheader("Ci tënkk")
+st.subheader("Ci lu gaaw")
 st.subheader("Lan môy CORONAVIRUS 🦠?")
 st.write("CORONAVIRUS dá dajalee yaneen xeeti VIRUS yuñ mëna wállántee çii ay nit ak ay Mala.🐃 Liñ mënë môdinee, ci dômu âdama yi, xeetu CORONAVIRUS yi mon-na sabab tawatı noy-yi🤧 yüy jeexital thim söthie ak yeeneen xéti woppi noy-yi yu thiosano peńku (MERS) andank mandargay pút gúy meetti di xasan (SRAS). CORONA bumúja féñ môy waral tawati CORONAVIRUS ñu guën kô xam ci Covid-19.")
 
