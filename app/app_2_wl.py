@@ -35,7 +35,7 @@ st.sidebar.markdown("*Yeesal gu muj: 25/03/2020*")
 st.sidebar.markdown("---")
 st.sidebar.header("Ressources utiles")
 
-st.sidebar.markdown("Numero ngir wotee bu jamp bu jeuk: **78 172 10 81**")
+st.sidebar.markdown("Numero ngir wotee bu jamp" \n " bu jeuk: **78 172 10 81**")
 st.sidebar.markdown("Numero ngir wotee bu jamp ñaarele: **76 765 97 31**")
 st.sidebar.markdown("Numero ngir wotee bu jamp ñeetele: **70 717 14 92**")
 st.sidebar.markdown("Numero boye wotee tee do fayye bu ministere: **800 00 50 50**")
